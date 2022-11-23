@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PaymentListener {
 
-    @RabbitListener(queues = "payment.successful")
+    @RabbitListener(queues = "payment.detail-order")
     public void getMessage(PaymentDTO dto) {
         String message = """
                 Payment id: %s
